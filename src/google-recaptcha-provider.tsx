@@ -73,7 +73,7 @@ export class GoogleReCaptchaProvider extends React.Component<
 
     // remove script
     const script = document.querySelector(`#${this.scriptId}`);
-    if (script) {
+    if ( script && script.parentNode ) {
       script.parentNode.removeChild(script);
     }
   }
